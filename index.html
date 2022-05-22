@@ -71,6 +71,44 @@
         </div>
         <div data-modal class="backdrop is-hidden">
                 <div class="modal">
+                  <h2 class="modal-text">Оставьте свои данные, мы вам перезвоним</h2>
+                  <form class="modal-tupe">
+                  <div class="chek">
+                    <div class="line">
+                      <svg class="icon-person" width="18" height="18">
+                        <use href="./images/icons.svg#icon-person-modal"></use>
+                      </svg>
+                      <label class="modal-name" for="id-name">Имя</label>
+                      <input class="name" type="text" id="id-name">  
+                    </div>
+                    <div class="line">
+                      <label for="id-phone">Телефон</label>
+                      <input class="phone" type="tel" id="id-phone">
+                      <svg class="icon-phone" width="18" height="18">
+                        <use href="./images/icons.svg#icon-phone-modal"></use>
+                      </svg>
+                      
+                    </div>
+                    <div class="line">
+                      <svg class="icon-email" width="18" height="18">
+                        <use href="./images/icons.svg#icon-email-modal"></use>
+                      </svg>
+                      <label class="modal-email" for="id-mail">Почта</label>
+                      <input class="modal-mail" type="email" id="id-mail">
+                    </div>
+                    <div class="line">
+                      <label  for="comment">Комментарий</label>
+                      <textarea class="comment" name="comment" id="comment" placeholder="Введите текст" ></textarea>
+                    </div>
+                    <div class="checkbox-futer">
+                      <input type="checkbox" name="topic" value="agreement" id="agreement" checked>
+                    <label class="futer-agreement" for="agreement">Соглашаюсь с рассылкой и принимаю <span> <a class="agreement-link" href="">Условия договора</a></span></label>
+                  </form>
+                    </div>
+                  </div>
+                    
+                    
+                  <button class="btn" type="submit">Отправить</button>
                   <button data-modal-close class="modal-script" type="button"><svg class="svg-close" width="11px" height="11">
                     <use href="./images/icons.svg#icon-close"></use></svg></button>
                   </div>
@@ -385,7 +423,24 @@
                      </li> 
                    </ul>
                    </div>
+                  
+                <div class="futer-sub">
+                  <h2 class="futer-tekst">Подпишитесь на рассылку</h2>
+                  <ul class="subscribe">
+                    <li>
+                      <form>
+                        <input  class="form" type="email" name="user-name" placeholder="E-mail">
+                      </form>
+                    <li class="clik">
+                      <button class="futer-btn" type="button">Подписаться</button>
+                      <svg class="img-buton" width="24" height="24">
+                        <use href="./images/icons.svg#icon-subscribe"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>   
           </div>
+
         </address>
       </div>
     </footer>
