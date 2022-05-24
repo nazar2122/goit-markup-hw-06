@@ -380,8 +380,22 @@ textarea::placeholder {
 .line.last {
   margin-bottom: 20px;
 }
+
+.checkbox-container {
+  position: relative;
+  display: block;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  cursor: pointer;
+  margin-right: 7px;
+}
 .checkbox {
-  padding-left: 7px;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -389,20 +403,26 @@ textarea::placeholder {
 }
 
 .checkbox:checked + .icon-checkbox {
-  transform: scale(1);
+  fill: var(--primary-touch-color);
   opacity: 1;
+}
+.checkbox:checked ~ .icon-unchecked {
+  opacity: 0;
 }
 
 .icon-checkbox {
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   top: 0;
   left: 0;
   position: absolute;
-
+  opacity: 0;
   width: 16px;
   height: 15px;
 }
 
 .icon-unchecked {
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  opacity: 1;
   top: 0;
   left: 0;
   position: absolute;
@@ -412,11 +432,19 @@ textarea::placeholder {
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
   background-color: var(--primary-button-text-color);
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.checkbox:hover ~ .icon-unchecked,
+.checkbox:focus ~ .icon-unchecked {
+  border: 2px solid var(--primary-touch-color);
 }
 
 .agreement {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  margin-left: 7px;
+  display: flex;
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-p-color);
