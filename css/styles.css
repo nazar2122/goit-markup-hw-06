@@ -223,6 +223,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+/* Модальне вікно */
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -246,6 +247,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   min-width: 530px;
   min-height: 584px;
   transform: translate(-50%, -50%) scale(1);
@@ -270,6 +272,7 @@ img {
   height: 30px;
   background: var(--primary-button-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   border-radius: 50%;
 }
 .svg-close {
@@ -302,11 +305,19 @@ img {
   text-align: left;
   margin-bottom: 10px;
 }
+/* Оформлення модального вікна */
+
+.modal-tupe {
+  top: 79px;
+  left: 41px;
+  position: absolute;
+  display: flex;
+}
 
 .modal-text {
-  position: absolute;
   top: 51px;
   left: 40px;
+  margin-bottom: 12px;
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 20px;
@@ -315,12 +326,6 @@ img {
   letter-spacing: 0.03em;
 }
 
-.modal-tupe {
-  top: 79px;
-  left: 41px;
-  position: absolute;
-  display: flex;
-}
 .name-holder {
   text-align: left;
   display: inline-block;
@@ -430,6 +435,7 @@ textarea::placeholder {
   width: 16px;
   height: 15px;
   border: 2px solid var(--primary-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   background-color: var(--primary-button-text-color);
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
@@ -440,6 +446,7 @@ textarea::placeholder {
 }
 
 .agreement {
+  margin-bottom: 30px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -451,18 +458,16 @@ textarea::placeholder {
   letter-spacing: 0.03em;
 }
 .agreement-link {
+  margin-left: 5px;
   color: var(--primary-touch-color);
   text-decoration-line: underline;
 }
 
 .modal .btn {
-  position: absolute;
-  bottom: -74px;
-  left: 120px;
-  margin: 0;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   border-width: 0px;
   display: inline-block;
+  margin: 0;
   padding: 10px 32px;
   border-radius: 4px;
   min-width: 200px;
@@ -714,6 +719,7 @@ textarea::placeholder {
 .box {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .nav-footer {
   list-style: none;
@@ -814,7 +820,7 @@ textarea::placeholder {
 .futer-sub {
   padding-top: 12px;
   flex-direction: column;
-  margin-left: 40px;
+  margin-left: 100px;
   display: flex;
   list-style: none;
 }
@@ -880,6 +886,7 @@ textarea::placeholder {
   align-items: center;
 }
 .futer-img {
+  fill: var(--primary-button-text-color);
   margin-left: 10px;
 }
 
