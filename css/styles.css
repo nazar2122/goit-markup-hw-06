@@ -152,7 +152,7 @@ img {
 }
 
 .icon-mail:focus {
-  transition: var(--primary-touch-color);
+  fill: var(--primary-touch-color);
 }
 
 .icon-mail {
@@ -287,13 +287,14 @@ img {
   line-height: 1.16;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
-  order: 1px solid #2196f3;
+  border: 1px solid var(--primary-touch-color);
+
   border-radius: 4px;
 }
 .line input:hover,
 .line input:focus {
   outline: none;
-  border: 1px solid #2196f3;
+  border: 1px solid var(--primary-touch-color);
   border-radius: 4px;
 }
 
