@@ -414,6 +414,10 @@ textarea::placeholder {
 .checkbox:checked ~ .icon-unchecked {
   opacity: 0;
 }
+icon-checkbox:hover,
+icon-checkbox:focus {
+  border: 2px solid var(--primary-touch-color);
+}
 
 .icon-checkbox {
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
